@@ -2,7 +2,9 @@
 
 ![Banner](assets/banner.png)
 
-<img src="assets/goku.gif" alt="Goku"/>
+<p align="center">
+  <img src="assets/goku.gif" alt="Goku" style="width:100%;max-width:100%;height:auto;display:block;" />
+</p>
 
 ```javascript
 const syeka = {
