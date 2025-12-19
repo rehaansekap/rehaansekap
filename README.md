@@ -2,7 +2,7 @@
 
 ![Banner](assets/banner.png)
 
-<p align="center" style="width: 100%;">
+<p width="100%" align="center">
   <img src="assets/goku.gif" alt="Goku" />
 </p>
 
