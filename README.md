@@ -3,7 +3,7 @@
 ![Banner](assets/banner.png)
 
 <p align="center">
-  <img src="assets/goku.gif" alt="Goku" style="width:100%;max-width:100%;height:auto;display:block;" />
+  <img src="assets/goku.gif" alt="Goku" />
 </p>
 
 ```javascript
