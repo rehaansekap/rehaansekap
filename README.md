@@ -37,11 +37,7 @@ const syeka = {
 
 ![](https://github-contributor-stats.vercel.app/api?username=rehaansekap&limit=5&theme=dark&combine_all_yearly_contributions=true)
 
-###
-
-<img src="https://raw.githubusercontent.com/rehaansekap/rehaansekap/output/snake.svg" alt="Snake animation" />
-
-###
+### 📊 My Pacman Contribution Graph
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/rehaansekap/rehaansekap/output/pacman-contribution-graph-dark.svg">
