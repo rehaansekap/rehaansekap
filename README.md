@@ -1,6 +1,6 @@
 ### 💫 About Me:
 
-![Banner](assets/banner.png)
+<!-- ![Banner](assets/banner.png) -->
 
 <p width="100%" align="center">
   <img src="assets/goku.gif" alt="Goku" />
