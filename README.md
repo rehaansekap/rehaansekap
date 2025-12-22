@@ -30,7 +30,7 @@ const syeka = {
 ### ⚙️ &nbsp;GitHub Analytics
 
 <p align="left">
-  <a href="https://github.com/rehaansekap">
+  <a href="https://github.com/rehaansekap" style="text-decoration: none;">
     <img height="180em" src="https://github-readme-stats.vercel.app/api?username=rehaansekap&theme=transparent&hide_border=false&include_all_commits=true&count_private=true"/>
     <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=rehaansekap&theme=transparent&hide_border=false&include_all_commits=false&count_private=false&layout=compact"/>
     <!-- ![](https://github-readme-stats.vercel.app/api/top-langs/?username=rehaansekap&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact)<br/>
