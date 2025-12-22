@@ -30,13 +30,13 @@ const syeka = {
 ### ⚙️ &nbsp;GitHub Analytics
 
 <p align="left">
-<a href="https://github.com/rehaansekap">
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=rehaansekap&theme=dark&hide_border=false&include_all_commits=false&count_private=false"/>
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=rehaansekap&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact"/>
-<!-- ![](https://github-readme-stats.vercel.app/api/top-langs/?username=rehaansekap&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact)<br/>
-![](https://github-readme-stats.vercel.app/api?username=rehaansekap&theme=dark&hide_border=false&include_all_commits=false&count_private=false)<br/>
-![](https://nirzak-streak-stats.vercel.app/?user=rehaansekap&theme=dark&hide_border=false) -->
-</a>
+  <a href="https://github.com/rehaansekap">
+    <img height="180em" src="https://github-readme-stats.vercel.app/api?username=rehaansekap&theme=dark&hide_border=false&include_all_commits=false&count_private=false"/>
+    <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=rehaansekap&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact"/>
+    <!-- ![](https://github-readme-stats.vercel.app/api/top-langs/?username=rehaansekap&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact)<br/>
+    ![](https://github-readme-stats.vercel.app/api?username=rehaansekap&theme=dark&hide_border=false&include_all_commits=false&count_private=false)<br/>
+    ![](https://nirzak-streak-stats.vercel.app/?user=rehaansekap&theme=dark&hide_border=false) -->
+  </a>
 </p>
 
 ![](https://komarev.com/ghpvc/?username=rehaansekap)
@@ -44,11 +44,11 @@ const syeka = {
 ### 🤝🏻 &nbsp;Connect with Me
 
 <p align="center">
-<a href="https://www.linkedin.com/in/rehansekap/"><img src="https://img.shields.io/badge/-Raihan%20Syeka%20Pramukastie-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
-<a href="https://medium.com/@rehanseekap"><img src="https://img.shields.io/badge/@rehanseekap-203645?style=for-the-badge&logo=medium&logoColor=white"/></a>
-<a href="https://www.instagram.com/rehanseekap/"><img src="https://img.shields.io/badge/@rehanseekap-E2306C?style=for-the-badge&logo=instagram&logoColor=white"/></a>
-<a href="mailto:rehaansekap@gmail.com"><img src="https://img.shields.io/badge/rehaansekap@gmail.com-FD1D1D?style=for-the-badge&logo=gmail&logoColor=white"/></a>
-<a href="https://www.facebook.com/rehanseekap"><img src="https://img.shields.io/badge/Raihan%20Syeka%20Pramukastie-843AB5?style=for-the-badge&logo=facebook&logoColor=white"/></a>
+  <a href="https://www.linkedin.com/in/rehansekap/"><img src="https://img.shields.io/badge/-Raihan%20Syeka%20Pramukastie-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
+  <a href="https://medium.com/@rehanseekap"><img src="https://img.shields.io/badge/@rehanseekap-203645?style=for-the-badge&logo=medium&logoColor=white"/></a>
+  <a href="https://www.instagram.com/rehanseekap/"><img src="https://img.shields.io/badge/@rehanseekap-E2306C?style=for-the-badge&logo=instagram&logoColor=white"/></a>
+  <a href="mailto:rehaansekap@gmail.com"><img src="https://img.shields.io/badge/rehaansekap@gmail.com-FD1D1D?style=for-the-badge&logo=gmail&logoColor=white"/></a>
+  <a href="https://www.facebook.com/rehanseekap"><img src="https://img.shields.io/badge/Raihan%20Syeka%20Pramukastie-843AB5?style=for-the-badge&logo=facebook&logoColor=white"/></a>
 </p>
 
 <!-- ### 📊 My Pacman Contribution Graph
