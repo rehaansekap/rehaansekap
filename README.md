@@ -1,12 +1,12 @@
 ## 👋 &nbsp;Hey there! I'm Syeka
 
-### 💫 &nbsp;About Me:
-
 <!-- ![Banner](assets/banner.png) -->
 
 <p width="100%" align="center">
   <img src="assets/goku.gif" alt="Goku" />
 </p>
+
+### 💫 &nbsp;About Me:
 
 ```javascript
 const syeka = {
