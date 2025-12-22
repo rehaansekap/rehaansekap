@@ -16,7 +16,7 @@ const syeka = {
   interests: ["Web Development", "AI/ML", "User Experience"],
   askMeAbout: ["Web Dev", "Backend Architecture", "UI/UX Design"],
   funFact: "Currently in intensive learning mode 📚",
-  myCV: "https://drive.google.com/file/d/1cGUzYII4PA-pohvNxwFaD90fQLT4GBGn/view?usp=drive_link",
+  // myCV: "https://drive.google.com/file/d/1cGUzYII4PA-pohvNxwFaD90fQLT4GBGn/view?usp=drive_link",
 };
 ```
 
