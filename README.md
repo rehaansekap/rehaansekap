@@ -1,4 +1,4 @@
-## 👋 &nbsp;Hey there! I'm Sykea
+## 👋 &nbsp;Hey there! I'm Syeka
 
 ### 💫 &nbsp;About Me:
 
