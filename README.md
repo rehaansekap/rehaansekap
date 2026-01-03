@@ -30,10 +30,21 @@ const syeka = {
 
 <p align="left">
   <a href="https://github.com/rehaansekap">
-    <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api?username=rehaansekap&show_icons=true&theme=transparent&include_all_commits=true&count_private=true"/>
-    &nbsp;
-    <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=rehaansekap&layout=compact&langs_count=8&theme=transparent"/>
-    <img height="180em" src="https://nirzak-streak-stats.vercel.app/?user=rehaansekap&theme=transparent&hide_border=false"/>    
+    <div>
+      <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api?username=rehaansekap&show_icons=true&theme=transparent&include_all_commits=true&count_private=true"/>
+      &nbsp;
+      <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=rehaansekap&layout=compact&langs_count=8&theme=transparent"/>
+    </div>
+    <div align="center">
+      <img height="180em" src="https://nirzak-streak-stats.vercel.app/?user=rehaansekap&theme=transparent&hide_border=false"/>    
+    </div>
+    <div align="center">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/rehaansekap/rehaansekap/output/pacman-contribution-graph-dark.svg">
+        <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/rehaansekap/rehaansekap/output/pacman-contribution-graph.svg">
+        <img alt="pacman contribution graph" src="https://raw.githubusercontent.com/rehaansekap/rehaansekap/output/pacman-contribution-graph.svg">
+      </picture>
+    </div>
   </a>
 </p>
 
