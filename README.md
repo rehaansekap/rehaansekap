@@ -44,7 +44,7 @@ const syeka = {
       <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=rehaansekap&layout=compact&langs_count=8"/>
     </div>
     <div align="center" style="text-decoration:none">
-      <img height="180em" src="https://streak-stats.demolab.com?user=rehaansekap&short_numbers=true&date_format=j%20M%5B%20Y%5D&type=png"/>    
+      <img height="180em" src="https://streak-stats.demolab.com?user=rehaansekap&short_numbers=true&date_format=j%20M%5B%20Y%5D"/>    
     </div>
   </a>
 </p>
