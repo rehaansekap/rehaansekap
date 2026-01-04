@@ -55,6 +55,10 @@ const syeka = {
   </a>
 </div>
 
+### 🐍 &nbsp;Contribution
+
+<img src="https://raw.githubusercontent.com/rehaansekap/rehaansekap/output/snake.svg" alt="Snake animation" />
+
 ### 🤝🏻 &nbsp;Connect with Me
 
 <p align="center">
@@ -64,7 +68,3 @@ const syeka = {
   <a href="mailto:rehaansekap@gmail.com"><img src="https://img.shields.io/badge/rehaansekap@gmail.com-FD1D1D?style=for-the-badge&logo=gmail&logoColor=white"/></a>
   <a href="https://www.facebook.com/rehanseekap"><img src="https://img.shields.io/badge/Raihan%20Syeka%20Pramukastie-843AB5?style=for-the-badge&logo=facebook&logoColor=white"/></a>
 </p>
-
-### 🐍 &nbsp;Snake Animation
-
-<img src="https://raw.githubusercontent.com/rehaansekap/rehaansekap/output/snake.svg" alt="Snake animation" />
