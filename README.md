@@ -59,8 +59,8 @@ const syeka = {
 
 <p align="center">
   <a href="https://www.linkedin.com/in/rehansekap/"><img src="https://img.shields.io/badge/-Raihan%20Syeka%20Pramukastie-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
-  <a href="https://medium.com/@rehanseekap"><img src="https://img.shields.io/badge/@rehanseekap-203645?style=for-the-badge&logo=medium&logoColor=white"/></a>
-  <a href="https://www.instagram.com/rehanseekap/"><img src="https://img.shields.io/badge/@rehanseekap-E2306C?style=for-the-badge&logo=instagram&logoColor=white"/></a>
+  <a href="https://medium.com/@rehanseekap"><img src="https://img.shields.io/badge/rehanseekap-203645?style=for-the-badge&logo=medium&logoColor=white"/></a>
+  <a href="https://www.instagram.com/rehanseekap/"><img src="https://img.shields.io/badge/rehanseekap-E2306C?style=for-the-badge&logo=instagram&logoColor=white"/></a>
   <a href="mailto:rehaansekap@gmail.com"><img src="https://img.shields.io/badge/rehaansekap@gmail.com-FD1D1D?style=for-the-badge&logo=gmail&logoColor=white"/></a>
   <a href="https://www.facebook.com/rehanseekap"><img src="https://img.shields.io/badge/Raihan%20Syeka%20Pramukastie-843AB5?style=for-the-badge&logo=facebook&logoColor=white"/></a>
 </p>
