@@ -55,10 +55,6 @@ const syeka = {
   </a>
 </div>
 
-### 🐍 &nbsp;Contribution
-
-<img src="https://raw.githubusercontent.com/rehaansekap/rehaansekap/output/snake.svg" alt="Snake animation" />
-
 ### 🤝🏻 &nbsp;Connect with Me
 
 <p align="center">
