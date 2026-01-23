@@ -15,7 +15,7 @@ const syeka = {
   currentFocus: "Learning & Building",
   interests: ["Web Development", "AI/ML", "User Experience"],
   askMeAbout: ["Web Dev", "Backend Architecture", "UI/UX Design"],
-  funFact: "Currently in intensive learning mode 📚",
+  funFact: "Currently in intenive learning mode 📚",
 };
 ```
 
