@@ -1,4 +1,4 @@
-## 👋 &nbsp;Hey there! I'm Syeka
+## 👋 &nbsp;Hey there! I'm Syeka 
 
 <!-- ![Banner](assets/banner.png) -->
 
