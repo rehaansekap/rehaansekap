@@ -22,7 +22,7 @@ Panduan lengkap untuk mendeploy aplikasi MongoDB Express React Node (MERN) ke Di
 
 ## Prasyarat
 
-Sebelum memulai, pastikan Anda memiliki:
+Sebelum memulai, pastikan Kamu memiliki:
 - Akun GitHub dengan repository MERN yang sudah siap
 - Akun DigitalOcean (gratis $200 credit untuk 60 hari pertama)
 - SSH client di komputer lokal (bawaan pada Linux/Mac, PuTTY atau Git Bash untuk Windows)
@@ -44,14 +44,14 @@ Sebelum memulai, pastikan Anda memiliki:
 
 ### 1.3 Pilih OS dan Ukuran
 - **Choose an image**: Pilih **Ubuntu 24.04 x64** (LTS terbaru dan stabil)
-- **Droplet type**: Pilih **Regular Intel Processor** (standar)
+- **Droplet type**: Pilih **Regular Intel Processor** (stKamur)
 - **Droplet size**: Pilih **$6/bulan** (2 GB RAM, 1 CPU) minimal untuk MERN stack
-  - Jika traffic besar, naik ke **$12/bulan** (4 GB RAM, 2 CPU)
+  - Kalau traffic besar, naik ke **$12/bulan** (4 GB RAM, 2 CPU)
 
 ### 1.4 Konfigurasi VPC dan Authentication
 - **VPC Network**: Biarkan default
 - **Authentication**: Pilih **SSH keys** untuk keamanan lebih baik
-  - Jika belum punya SSH key, click **"New SSH Key"**
+  - Kalau belum punya SSH key, click **"New SSH Key"**
   - Buka terminal di komputer lokal jalankan:
     ```bash
     ssh-keygen -t rsa -b 4096 -f ~/.ssh/digitalocean -C "your-email@example.com"
@@ -85,7 +85,7 @@ Contoh:
 ssh -i ~/.ssh/digitalocean root@123.45.67.89
 ```
 
-Ketik "yes" jika diminta konfirmasi.
+Ketik "yes" Kalau diminta konfirmasi.
 
 ### 2.2 Update System Packages
 ```bash
@@ -149,7 +149,7 @@ sudo systemctl enable nginx
 sudo apt-get install -y mongodb-org
 ```
 
-Jika tidak tersedia di repository default, gunakan MongoDB official repository:
+Kalau tidak tersedia di repository default, gunakan MongoDB official repository:
 ```bash
 curl -fsSL https://www.mongodb.org/static/pgp/server-7.0.asc | sudo apt-key add -
 echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/7.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-7.0.list
@@ -195,7 +195,7 @@ show databases
 exit
 ```
 
-**Catatan**: Jika menggunakan MongoDB Atlas (cloud), skip langkah ini dan gunakan connection string dari Atlas nanti di environment variables.
+**Catatan**: Kalau menggunakan MongoDB Atlas (cloud), skip langkah ini dan gunakan connection string dari Atlas nanti di environment variables.
 
 ---
 
@@ -221,7 +221,7 @@ git clone git@github.com:YOUR_USERNAME/DliLearn.git
 cd DliLearn
 ```
 
-Ganti `YOUR_USERNAME` dengan username GitHub Anda.
+Ganti `YOUR_USERNAME` dengan username GitHub Kamu.
 
 ### 5.3 Verifikasi Struktur
 ```bash
@@ -238,7 +238,7 @@ Pastikan ada folder `app/`, `resources/`, `server/`, atau struktur MERN yang ses
 
 ```bash
 # Masuk ke folder backend
-cd ~/DliLearn/server  # atau sesuai struktur project Anda
+cd ~/DliLearn/server  # atau sesuai struktur project Kamu
 
 # Buat file .env
 nano .env
@@ -246,7 +246,7 @@ nano .env
 
 ### 6.2 Isi Environment Variables Backend
 
-Sesuaikan dengan konfigurasi Anda:
+Sesuaikan dengan konfigurasi Kamu:
 
 ```env
 # Backend Configuration
@@ -255,7 +255,7 @@ NODE_ENV=production
 
 # Database MongoDB
 MONGODB_URI=mongodb://localhost:27017/dli_learn
-# Atau jika menggunakan MongoDB Atlas:
+# Atau Kalau menggunakan MongoDB Atlas:
 # MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/dli_learn?retryWrites=true&w=majority
 
 # JWT Secret (generate dengan: openssl rand -base64 32)
@@ -263,15 +263,15 @@ JWT_SECRET=your-very-secret-key-here-change-this
 
 # Frontend URL untuk CORS
 FRONTEND_URL=http://YOUR_IP_ADDRESS:3000
-# Nanti ganti dengan domain jika sudah ada
+# Nanti ganti dengan domain Kalau sudah ada
 
-# Email Configuration (jika perlu)
+# Email Configuration (Kalau perlu)
 MAIL_HOST=smtp.gmail.com
 MAIL_PORT=587
 MAIL_USER=your-email@gmail.com
 MAIL_PASSWORD=your-app-password
 
-# Lainnya sesuai kebutuhan aplikasi Anda
+# Lainnya sesuai kebutuhan aplikasi Kamu
 ```
 
 Tekan `Ctrl + X`, kemudian `Y`, `Enter` untuk save.
@@ -279,14 +279,14 @@ Tekan `Ctrl + X`, kemudian `Y`, `Enter` untuk save.
 ### 6.3 Frontend - Buat `.env` atau `.env.production` di folder frontend
 
 ```bash
-cd ~/DliLearn/client  # atau sesuai struktur project Anda
+cd ~/DliLearn/client  # atau sesuai struktur project Kamu
 nano .env.production
 ```
 
 ```env
 # Frontend Configuration
 VITE_API_URL=http://YOUR_IP_ADDRESS:5000
-# Atau jika build production: http://localhost:5000 (akan di-proxy oleh Nginx)
+# Atau Kalau build production: http://localhost:5000 (akan di-proxy oleh Nginx)
 ```
 
 ---
@@ -299,8 +299,8 @@ cd ~/DliLearn/server
 npm install
 ```
 
-### 7.2 Build/Compile Backend (jika ada)
-Jika ada build step:
+### 7.2 Build/Compile Backend (Kalau ada)
+Kalau ada build step:
 ```bash
 npm run build
 # atau
@@ -312,7 +312,7 @@ npm run compile
 npm start
 ```
 
-Jika berjalan tanpa error, tekan `Ctrl + C` untuk stop.
+Kalau berjalan tanpa error, tekan `Ctrl + C` untuk stop.
 
 ### 7.4 Setup PM2 untuk Backend
 ```bash
@@ -407,7 +407,7 @@ server {
 }
 ```
 
-**Penting**: Ganti `/home/deploy/DliLearn/client/dist` dengan path yang sesuai di server Anda.
+**Penting**: Ganti `/home/deploy/DliLearn/client/dist` dengan path yang sesuai di server Kamu.
 
 ### 9.2 Test Konfigurasi Nginx
 ```bash
@@ -437,7 +437,7 @@ http://YOUR_IP_ADDRESS
 
 Contoh: `http://123.45.67.89`
 
-**Jika berhasil**, Anda akan melihat:
+**Kalau berhasil**, Kamu akan melihat:
 - Frontend React aplikasi
 - API endpoint berjalan di `http://YOUR_IP_ADDRESS/api/`
 
@@ -449,7 +449,7 @@ Contoh: `http://123.45.67.89`
 
 ### 10.1 Setup SSL dengan Let's Encrypt (Opsional saat ini)
 
-Untuk production dengan domain, Anda perlu SSL. Skip untuk sekarang jika belum punya domain.
+Untuk production dengan domain, Kamu perlu SSL. Skip untuk sekarang Kalau belum punya domain.
 
 ### 10.2 Enable GZIP Compression
 
@@ -486,7 +486,7 @@ sudo tail -50 /var/log/nginx/access.log
 
 ## Langkah 11: Update Backend URL di Frontend Production Build
 
-Jika API endpoint berbeda saat production, rebuild frontend:
+Kalau API endpoint berbeda saat production, rebuild frontend:
 
 ### 11.1 Update Environment Variable
 
@@ -526,7 +526,7 @@ Cek apakah folder dist ada:
 ls -la ~/DliLearn/client/dist/
 ```
 
-Rebuild jika kosong.
+Rebuild Kalau kosong.
 
 ### Nginx error
 ```bash
@@ -545,32 +545,11 @@ sudo systemctl status mongod
 sudo lsof -i :5000  # Cek port 5000
 sudo lsof -i :80   # Cek port 80
 ```
-
----
-
-## Checklist Deployment
-
-- [ ] Droplet DigitalOcean dibuat
-- [ ] SSH connection berhasil
-- [ ] System updated
-- [ ] Node.js & npm terinstall
-- [ ] MongoDB terinstall & running
-- [ ] Git setup selesai
-- [ ] Repository di-clone
-- [ ] Environment variables dikonfigurasi
-- [ ] Backend dependencies installed
-- [ ] Frontend build berhasil
-- [ ] PM2 backend running
-- [ ] Nginx configured
-- [ ] Aplikasi accessible via IP address
-
----
-
 ---
 
 # (OPSIONAL) LANGKAH 11: SETUP DOMAIN DAN SSL
 
-*Ikuti langkah ini hanya jika Anda sudah membeli domain dan ingin menambahkannya.*
+*Ikuti langkah ini hanya Kalau Kamu sudah membeli domain dan ingin menambahkannya.*
 
 ---
 
@@ -582,13 +561,13 @@ sudo lsof -i :80   # Cek port 80
 
 ### 11.2 Setup DNS Pointing ke DigitalOcean
 
-Di control panel domain provider Anda:
+Di control panel domain provider Kamu:
 
 1. Cari menu **DNS Records** atau **Name Servers**
 2. Tambah A record baru:
    - **Name/Host**: `@` atau nama domain
    - **Type**: A
-   - **Value/IP**: Masukkan IP Droplet Anda (misal: `123.45.67.89`)
+   - **Value/IP**: Masukkan IP Droplet Kamu (misal: `123.45.67.89`)
    - **TTL**: 3600 (atau default)
    - Save
 
@@ -615,7 +594,7 @@ sudo apt install -y certbot python3-certbot-nginx
 sudo certbot certonly --nginx -d your-domain.com -d www.your-domain.com
 ```
 
-Ganti `your-domain.com` dengan domain Anda.
+Ganti `your-domain.com` dengan domain Kamu.
 
 Masukkan email untuk renewal notifications dan agree terms.
 
@@ -710,7 +689,7 @@ server {
 }
 ```
 
-**Penting**: Ganti semua `your-domain.com` dengan domain Anda.
+**Penting**: Ganti semua `your-domain.com` dengan domain Kamu.
 
 ### 11.7 Test dan Reload Nginx
 ```bash
@@ -737,7 +716,7 @@ Restart backend:
 pm2 restart dli-backend
 ```
 
-### 11.9 Update Frontend .env.production (jika perlu)
+### 11.9 Update Frontend .env.production (Kalau perlu)
 ```bash
 cd ~/DliLearn/client
 nano .env.production
@@ -762,7 +741,7 @@ sudo systemctl reload nginx
 sudo certbot renew --dry-run
 ```
 
-Jika sukses, setup cron job (biasanya sudah otomatis):
+Kalau sukses, setup cron job (biasanya sudah otomatis):
 ```bash
 sudo systemctl enable certbot.timer
 sudo systemctl start certbot.timer
@@ -819,41 +798,3 @@ Di DigitalOcean dashboard:
 3. Enable backups otomatis
 
 ---
-
-## Checklist Domain & SSL
-
-- [ ] Domain dibeli dan DNS dikonfigurasi
-- [ ] DNS record pointing ke IP Droplet
-- [ ] DNS propagation selesai (~30 menit)
-- [ ] SSL certificate generated dengan Certbot
-- [ ] Nginx configuration updated untuk SSL
-- [ ] HTTPS redirect configured
-- [ ] Certificate auto-renewal enabled
-- [ ] Backend environment updated
-- [ ] Frontend rebuilt
-- [ ] Domain accessible via HTTPS
-- [ ] SSL certificate valid di browser
-
----
-
-## Kesimpulan
-
-Aplikasi MERN Anda sekarang:
-- ✅ Berjalan di DigitalOcean Droplet
-- ✅ Accessible via IP address
-- ✅ (Opsional) Secured dengan domain dan SSL
-
-### Tips Maintenance:
-1. **Update dependencies**: `npm audit fix`
-2. **Monitor logs**: `pm2 logs` dan `sudo tail /var/log/nginx/error.log`
-3. **Backup database**: Regular export MongoDB
-4. **SSL renewal**: Automatic dengan Certbot
-5. **Scaling**: Upgrade droplet jika needed
-
-### Kontak Support:
-- DigitalOcean: https://www.digitalocean.com/support
-- Let's Encrypt: https://letsencrypt.org/support/
-
----
-
-**Happy Deploying! 🚀**
