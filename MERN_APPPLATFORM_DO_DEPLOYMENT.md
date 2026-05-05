@@ -1,59 +1,14 @@
-# Panduan Deployment MERN Stack di DigitalOcean App Platform
-
-Panduan lengkap untuk mendeploy aplikasi MongoDB Express React Node (MERN) menggunakan DigitalOcean App Platform - solusi PaaS yang lebih mudah, otomatis, dan scalable.
-
----
-
 ## Daftar Isi
 
-1. [Apa itu App Platform?](#apa-itu-app-platform)
-2. [Prasyarat](#prasyarat)
-3. [Langkah 1: Persiapan Repository di GitHub](#langkah-1-persiapan-repository-di-github)
-4. [Langkah 2: Setup Environment Variables](#langkah-2-setup-environment-variables)
-5. [Langkah 3: Konfigurasi App Platform](#langkah-3-konfigurasi-app-platform)
-6. [Langkah 4: Setup Database MongoDB](#langkah-4-setup-database-mongodb)
-7. [Langkah 5: Deploy Aplikasi](#langkah-5-deploy-aplikasi)
-8. [Langkah 6: Testing Aplikasi](#langkah-6-testing-aplikasi)
-9. [Langkah 7: Setup Custom Domain (Opsional)](#langkah-7-setup-custom-domain-opsional)
-10. [Troubleshooting & Monitoring](#troubleshooting--monitoring)
-
----
-
-## Apa itu App Platform?
-
-**DigitalOcean App Platform** adalah layanan PaaS yang menyediakan:
-
-- ✅ **Automatic deployment** dari GitHub
-- ✅ **Auto-scaling** dan load balancing
-- ✅ **Free SSL/HTTPS** untuk custom domain
-- ✅ **Environment variables management**
-- ✅ **Built-in databases** (MongoDB, PostgreSQL, MySQL)
-- ✅ **Zero-downtime deployments**
-- ✅ **Monitoring & logging** terintegrasi
-- ✅ **CI/CD otomatis** saat push ke GitHub
-- ✅ **Harga lebih murah** untuk aplikasi kecil-menengah
-
-**Keuntungan vs Droplets:**
-
-- Tidak perlu SSH/server management
-- Deploy hanya dengan git push
-- Auto SSL/HTTPS
-- Built-in monitoring
-- Lebih scalable
-
-**Harga dimulai dari $12/bulan** (gratis untuk tier dasar)
-
----
-
-## Prasyarat
-
-Sebelum memulai, pastikan Anda memiliki:
-
-- ✅ Akun GitHub dengan repository MERN (public atau private)
-- ✅ Akun DigitalOcean
-- ✅ Access ke repository GitHub (permission untuk add webhook)
-- ✅ Git terinstall di komputer lokal
-- ✅ Basic understanding tentang deployment concepts
+1. [Prasyarat](#prasyarat)
+2. [Langkah 1: Persiapan Repository di GitHub](#langkah-1-persiapan-repository-di-github)
+3. [Langkah 2: Setup Environment Variables](#langkah-2-setup-environment-variables)
+4. [Langkah 3: Konfigurasi App Platform](#langkah-3-konfigurasi-app-platform)
+5. [Langkah 4: Setup Database MongoDB](#langkah-4-setup-database-mongodb)
+6. [Langkah 5: Deploy Aplikasi](#langkah-5-deploy-aplikasi)
+7. [Langkah 6: Testing Aplikasi](#langkah-6-testing-aplikasi)
+8. [Langkah 7: Setup Custom Domain (Opsional)](#langkah-7-setup-custom-domain-opsional)
+9. [Troubleshooting & Monitoring](#troubleshooting--monitoring)
 
 ---
 
@@ -63,7 +18,7 @@ App Platform membutuhkan struktur repository yang tepat untuk auto-detect build 
 
 ### 1.1 Cek Struktur Repository
 
-Repository MERN Anda harus memiliki struktur seperti ini:
+Repository MERN Kamu harus memiliki struktur seperti ini:
 
 ```
 DliLearn/
@@ -92,7 +47,7 @@ cd ~/DliLearn
 cat .gitignore
 ```
 
-Jika belum ada, buat/update `.gitignore`:
+Kalau belum ada, buat/update `.gitignore`:
 
 ```
 node_modules/
@@ -176,7 +131,7 @@ services:
           - key: VITE_API_URL
             value: ${backend.PUBLIC_URL}/api
 
-    # Untuk statik file serving jika perlu
+    # Untuk statik file serving Kalau perlu
     # - name: static-files
     #   source_dir: public
     #   resource_type: static_site
@@ -195,7 +150,7 @@ databases:
 #   - domain: your-domain.com
 ```
 
-**PENTING**: Ganti `YOUR_USERNAME` dengan GitHub username Anda!
+**PENTING**: Ganti `YOUR_USERNAME` dengan GitHub username Kamu!
 
 ### 1.4 Tambahkan build scripts di package.json
 
@@ -255,13 +210,13 @@ FRONTEND_URL=https://your-app.ondigitalocean.app
 # Database akan di-set otomatis dari App Platform
 # MONGODB_URI akan di-inject sebagai ${db.DATABASE_URL}
 
-# Email Configuration (jika ada)
+# Email Configuration (Kalau ada)
 MAIL_HOST=smtp.gmail.com
 MAIL_PORT=587
 MAIL_USER=your-email@gmail.com
 MAIL_PASSWORD=your-app-password
 
-# API Keys (jika ada)
+# API Keys (Kalau ada)
 STRIPE_API_KEY=sk_live_xxxxx
 CLOUDINARY_URL=cloudinary://xxx
 ```
@@ -282,11 +237,11 @@ openssl rand -base64 32
 
 Output akan seperti: `aBc123XyZ/+==`
 
-Catat nilai ini untuk digunakan di App Platform nanti.
+Catat nilai ini untuk diPake di App Platform nanti.
 
 ### 2.3 Generate Database Password (untuk MongoDB)
 
-Jika setup MongoDB manual (bukan managed):
+Kalau setup MongoDB manual (bukan managed):
 
 ```bash
 openssl rand -base64 16
@@ -299,18 +254,18 @@ openssl rand -base64 16
 ### 3.1 Login ke DigitalOcean
 
 1. Buka [digitalocean.com](https://www.digitalocean.com)
-2. Login ke akun Anda
+2. Login ke akun Kamu
 3. Klik menu **Apps** di sidebar
 
 ### 3.2 Authorize GitHub Integration
 
-Jika belum pernah:
+Kalau belum pernah:
 
 1. Klik **Create App**
 2. Pilih **GitHub**
 3. Klik **Authorize DigitalOcean**
 4. Login GitHub dan approve access
-5. Pilih repository **DliLearn** (atau repository Anda)
+5. Pilih repository **DliLearn** (atau repository Kamu)
 
 ### 3.3 Create New App
 
@@ -327,7 +282,7 @@ App Platform akan auto-detect konfigurasi dari `app.yaml`:
 - ✅ Frontend service (Static site)
 - ✅ Database MongoDB
 
-Pastikan semua ter-detect dengan benar. Jika ada error, edit manual:
+Pastikan semua ter-detect dengan benar. Kalau ada error, edit manual:
 
 - Klik service → Edit
 - Adjust build command, run command, port, dll.
@@ -355,7 +310,7 @@ Pada tahap configuration, add semua environment variables:
 
 ### 3.6 Configure Database
 
-Jika menggunakan DigitalOcean Managed Database:
+Kalau Pake DigitalOcean Managed Database:
 
 1. Klik **Database** atau tab **Resources**
 2. Pilih **MongoDB** (managed service)
@@ -365,7 +320,7 @@ Jika menggunakan DigitalOcean Managed Database:
     - **Region**: Same region as app
 4. Database akan otomatis di-provision
 
-Atau gunakan MongoDB Atlas (cloud):
+Atau Pake MongoDB Atlas (cloud):
 
 - Sign up di [mongodb.com/cloud/atlas](https://www.mongodb.com/cloud/atlas)
 - Create cluster gratis (M0)
@@ -375,9 +330,9 @@ Atau gunakan MongoDB Atlas (cloud):
 
 ## Langkah 4: Setup Database MongoDB
 
-### 4.1 Opsi A: Menggunakan Managed MongoDB di DigitalOcean
+### 4.1 Opsi A: Pake Managed MongoDB di DigitalOcean
 
-Jika memilih managed MongoDB saat create app:
+Kalau memilih managed MongoDB saat create app:
 
 1. MongoDB akan auto-provisioned
 2. Connection string akan otomatis di-inject ke variable `${db.DATABASE_URL}`
@@ -393,9 +348,9 @@ databases:
       production: true
 ```
 
-### 4.2 Opsi B: Menggunakan MongoDB Atlas (Cloud)
+### 4.2 Opsi B: Pake MongoDB Atlas (Cloud)
 
-Jika ingin pakai cloud database:
+Kalau ingin pakai cloud database:
 
 1. Sign up di [mongodb.com/cloud/atlas](https://www.mongodb.com/cloud/atlas)
 2. Create free cluster (M0)
@@ -453,7 +408,7 @@ App Platform akan:
     - Image building
     - Service starting
     - Health checks
-3. Jika ada error, lihat logs:
+3. Kalau ada error, lihat logs:
     - Klik **Logs** tab
     - Filter by service (backend/frontend)
 
@@ -485,7 +440,7 @@ Setelah deployment selesai:
 
 ### 6.2 Test Backend API
 
-Gunakan curl atau Postman:
+Pake curl atau Postman:
 
 ```bash
 curl https://dli-learn-abc123.ondigitalocean.app/api/
@@ -533,7 +488,7 @@ Verify di backend logs:
 
 ## Langkah 7: Setup Custom Domain (Opsional)
 
-_Skip jika hanya ingin menggunakan `.ondigitalocean.app` domain._
+_Skip Kalau hanya ingin Pake `.ondigitalocean.app` domain._
 
 ### 7.1 Beli Domain
 
@@ -545,7 +500,7 @@ _Skip jika hanya ingin menggunakan `.ondigitalocean.app` domain._
 1. Di DigitalOcean, klik App → **Settings**
 2. Klik **Domains**
 3. Klik **Add Domain**
-4. Masukkan domain Anda: `your-domain.com`
+4. Masukkan domain Kamu: `your-domain.com`
 5. Klik **Add**
 
 App Platform akan generate **DNS records** yang perlu di-add di domain registrar.
@@ -580,7 +535,7 @@ Misal di Namecheap:
 
 ### 8.1 Update Backend Environment Variable
 
-Jika menggunakan custom domain:
+Kalau Pake custom domain:
 
 1. App Platform → backend service → **Environment**
 2. Update `FRONTEND_URL`:
@@ -676,7 +631,7 @@ Setiap kali push ke GitHub (`main` branch):
 
 ### 10.2 Deployment Failed
 
-Jika deployment gagal:
+Kalau deployment gagal:
 
 1. Klik **Deployments**
 2. Klik deployment yang failed
@@ -720,7 +675,7 @@ git push origin main
 
 ### 10.4 API CORS Errors
 
-Jika frontend dapat't call API:
+Kalau frontend dapat't call API:
 
 1. Check browser console error
 2. Usually: `Access-Control-Allow-Origin` missing
@@ -742,7 +697,7 @@ Jika frontend dapat't call API:
 1. Check logs untuk bottleneck
 2. Monitor resource usage:
     - App Platform → **Insights** → **Metrics**
-3. Jika CPU/Memory tinggi:
+3. Kalau CPU/Memory tinggi:
     - Upgrade instance size di app.yaml
     - Atau setup multiple instances untuk load balancing
 
@@ -751,7 +706,7 @@ Jika frontend dapat't call API:
 App Platform otomatis health check services:
 
 1. Check status: **App** → service → **Health**
-2. Jika unhealthy:
+2. Kalau unhealthy:
     - Service might be crashing
     - Check logs
     - Restart service: **Settings** → **Restart App**
@@ -785,7 +740,7 @@ Untuk production, setup alerts:
 
 ### 11.3 Backup Database
 
-Jika menggunakan managed MongoDB:
+Kalau Pake managed MongoDB:
 
 1. DigitalOcean → **Databases**
 2. Select database
@@ -871,64 +826,3 @@ jobs:
             - name: Test Frontend
               run: cd client && npm install && npm run test
 ```
-
-Automated testing sebelum deploy!
-
----
-
-## Checklist Final Deployment
-
-- [ ] Repository di GitHub siap
-- [ ] `app.yaml` configured correctly
-- [ ] Commit `app.yaml` dan push
-- [ ] DigitalOcean App Platform authorize GitHub
-- [ ] Create app dari repository
-- [ ] Environment variables dikonfigurasi
-- [ ] Database ter-setup (managed atau Atlas)
-- [ ] Deploy aplikasi
-- [ ] Frontend accessible
-- [ ] Backend API responsive
-- [ ] Database connected
-- [ ] Environment variables ter-load
-- [ ] Custom domain (opsional) di-setup
-- [ ] DNS propagated
-- [ ] HTTPS working
-- [ ] Automatic redeploy tested
-- [ ] Logs reviewed
-- [ ] Monitoring enabled
-
----
-
-## Kesimpulan
-
-Aplikasi MERN Anda sekarang:
-
-- ✅ Deployed di DigitalOcean App Platform
-- ✅ Auto-deploy dari GitHub (git push otomatis deploy)
-- ✅ Free SSL/HTTPS
-- ✅ Managed database
-- ✅ Built-in monitoring
-- ✅ Scalable infrastructure
-
-### Keuntungan Utama:
-
-1. **Automated** - Tidak perlu manual SSH/server management
-2. **Scalable** - Vertical & horizontal scaling dengan satu klik
-3. **Reliable** - Auto health checks dan recovery
-4. **Secure** - Free SSL, firewall built-in, managed database
-5. **Simple** - Deploy hanya dengan git push
-
-### Resources:
-
-- [DigitalOcean App Platform Docs](https://docs.digitalocean.com/products/app-platform/)
-- [app.yaml Reference](https://docs.digitalocean.com/products/app-platform/references/app-spec/)
-- [DigitalOcean Community](https://www.digitalocean.com/community)
-
-### Support:
-
-- DigitalOcean Support: https://www.digitalocean.com/support
-- Community Forum: https://www.digitalocean.com/community
-
----
-
-**Happy Deploying dengan App Platform! 🚀**
